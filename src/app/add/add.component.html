@@ -1,0 +1,31 @@
+<div id="maindiv">
+  <form>
+    <div class="form-group">
+      <label> Villain name </label>
+      <input type="text" #v_name class="form-control" placeholder="Enter name">
+    </div>
+
+    <div class="form-group">
+      <label> Photo URL </label>
+      <input type="text" #v_url class="form-control" placeholder="Enter photo url">
+    </div>
+
+    <div class="form-group">
+      <label> Dark side power </label>
+      <input type="text" #v_level class="form-control" placeholder="Enter dark side level">
+    </div>
+
+  </form>
+
+  <button class="btn btn-primary" (click)="Add(v_name, v_url, v_level)">ADD</button>
+
+
+  <div class="card-deck" *ngFor="let villain of villains">
+    <app-villain-card [v_name]="villain.name"
+    [v_url]="villain.url" [v_level]="villain.level">
+
+    </app-villain-card>
+  </div>
+
+
+</div>

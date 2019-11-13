@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Villain} from './villain';
 
 @Component({
   selector: 'app-root',
